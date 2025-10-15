@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday Anushka ✨</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg1:#0f1724;
+      --bg2:#2c1a3b;
+      --accent:#ffd1dc;
+      --muted:#f8eef6;
+    }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui;
+      background: linear-gradient(180deg, var(--bg1), var(--bg2));
+      color: var(--muted);
+      overflow-x: hidden;
+      text-align: center;
+    }
+    body.locked { overflow: hidden; }
+    #passwordOverlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.96);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    #passwordBox {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 28px 36px;
+      text-align: center;
+      color: white;
+      max-width: 300px;
+      width: 90%;
+    }
+    #passwordBox h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 32px;
+      margin-bottom: 14px;
+      color: var(--accent);
+    }
+    #passwordInput {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      text-align: center;
+      font-size: 16px;
+    }
+    #passwordSubmit {
+      margin-top: 14px;
+      padding: 10px 20px;
+      background: linear-gradient(90deg, #ffb3c7, #ff96b7);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #2b0a12;
+    }
+    #passwordError { color: #ffb3b3; font-size: 13px; display: none; }
+    .wrap { display: none; max-width: 900px; margin: auto; padding: 28px 20px 100px; }
+    .card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 24px;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+    }
+    h1.greeting {
+      font-family: 'Great Vibes', cursive;
+      font-size: 56px;
+      color: var(--accent);
+      margin: 0;
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100%{text-shadow:0 0 6px #ffb3c7;}50%{text-shadow:0 0 18px #ff96b7;} }
+    .btn {
+      background: linear-gradient(90deg,#ffb3c7,#ff96b7);
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      color: #2b0a12;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform .2s;
+    }
+    .btn:hover { transform: scale(1.05); }
+    .photoreel { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 6px; }
+    .photo {
+      min-width: 200px; height: 300px; border-radius: 10px;
+      flex: 0 0 auto; background-size: cover; background-position: center;
+      box-shadow: 0 6px 30px rgba(0,0,0,0.4);
+    }
+    .timeline { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+    .moment { display: flex; align-items: center; gap: 10px; }
+    .dot { width: 12px; height: 12px; background: var(--accent); border-radius: 50%; }
+    .meta { font-weight: 600; }
+    footer { margin-top: 30px; font-size: 13px; color: rgba(255,255,255,0.6); }
+  </style>
+</head>
+<body class="locked">
+
+  <!-- Password prompt -->
+  <div id="passwordOverlay">
+    <div id="passwordBox">
+      <h2>Enter Password 💖</h2>
+      <input type="password" id="passwordInput" placeholder="Enter secret code">
+      <button id="passwordSubmit">Unlock</button>
+      <p id="passwordError">Incorrect password. Try again.</p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="wrap" id="mainContent">
+    <section class="card">
+      <h1 class="greeting">Happy Birthday, Anushka ✨</h1>
+      <p>You are my every sunrise and my favorite dream.</p>
+      <button class="btn" id="playButton">Play Music 🎵</button>
+    </section>
+
+    <section class="card">
+      <h2>Our Love Story</h2>
+      <div class="timeline">
+        <div class="moment"><div class="dot"></div><div><div class="meta">2nd Jan — The day we met</div></div></div>
+        <div class="moment"><div class="dot"></div><div><div class="meta">16th March — First Date</div></div></div>
+        <div class="moment"><div class="dot"></div><div><div class="meta">10th June — Anniversary</div></div></div>
+        <div class="moment"><div class="dot"></div><div><div class="meta">17th June — Your Birthday</div></div></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Photo Reel</h2>
+      <div class="photoreel">
+        <div class="photo" style="background-image:url('Photo 1.webp');"></div>
+        <div class="photo" style="background-image:url('Photo 2.webp');"></div>
+        <div class="photo" style="background-image:url('Photo 3.webp');"></div>
+        <div class="photo" style="background-image:url('Photo 4.webp');"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>My Birthday Wish</h2>
+      <p style="line-height:1.6;">Every year with you feels like a secret I keep returning to — warm, bright, and impossible to forget. You are the quiet in my chaos and the laughter I never knew I needed. Happy birthday, my heart.</p>
+    </section>
+
+    <footer>
+      <p>Made with ❤️ — open on your phone for the sweetest feel</p>
+    </footer>
+  </div>
+
+  <audio id="bgAudio" src="Music.mp3" loop preload="auto"></audio>
+
+  <script>
+    const correctPassword = "wishify";
+    const overlay = document.getElementById("passwordOverlay");
+    const input = document.getElementById("passwordInput");
+    const error = document.getElementById("passwordError");
+    const main = document.getElementById("mainContent");
+    const playButton = document.getElementById("playButton");
+    const audio = document.getElementById("bgAudio");
+
+    // Password unlock
+    document.getElementById("passwordSubmit").addEventListener("click", check);
+    input.addEventListener("keypress", e => { if (e.key === "Enter") check(); });
+
+    function check() {
+      if (input.value.trim() === correctPassword) {
+        overlay.style.display = "none";
+        main.style.display = "block";
+        document.body.classList.remove("locked");
+      } else error.style.display = "block";
+    }
+
+    // Play/Pause button
+    let playing = false;
+    playButton.addEventListener("click", () => {
+      if (!playing) {
+        audio.play().then(() => playButton.textContent = "Pause Music ⏸️");
+        playing = true;
+      } else {
+        audio.pause();
+        playButton.textContent = "Play Music 🎵";
+        playing = false;
+      }
+    });
+  </script>
+</body>
+</html>
